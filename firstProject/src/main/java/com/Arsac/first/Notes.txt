@@ -10,3 +10,22 @@ So, Spring is the toolbox that makes building software easier, and dependencies 
 
 
 Basically Spring helps in creating and handling the object so that the coder can use them with the help of the dependencies.
+
+
+why autowired can not be used in main method:
+In a typical Spring application, you should not use @Autowired in the main method of the main class. The main method is typically used to bootstrap the Spring application context and start the application. Dependency injection using @Autowired is primarily used within Spring-managed components such as controllers, services, and beans.
+
+Here's why you don't use @Autowired in the main method:
+
+ApplicationContext Setup: In the main method, you usually create an instance of ApplicationContext using SpringApplication.run() to bootstrap the Spring context. This is where Spring initializes and manages beans. The @Autowired annotations work within components that are managed by the Spring context.
+
+Main Class Purpose: The main class is responsible for starting the application and often contains minimal code to configure and launch the Spring application context. It is not typically involved in defining or using Spring-managed beans.
+
+Instead, you use @Autowired within Spring-managed components such as controllers, services, or beans to inject dependencies. These components are detected and managed by the Spring context.
+
+
+
+what is autowired:
+In simple terms, `@Autowired` is like a magic tag in the Spring programming world. When you put `@Autowired` on something (usually a variable or method), Spring takes care of finding and connecting the right pieces of your program together.
+
+Imagine you're building a puzzle, and each piece represents a part of your software. `@Autowired` helps you find the right pieces and fit them together automatically, so you don't have to do all the searching and connecting yourself. It's like having a helpful assistant that knows where all the puzzle pieces belong and puts them in the right spots for you.
