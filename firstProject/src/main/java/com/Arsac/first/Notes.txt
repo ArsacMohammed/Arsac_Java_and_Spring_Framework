@@ -1,0 +1,12 @@
+Certainly! In simple terms:
+
+**What Spring Does:**
+Spring is like a helpful toolbox for building computer programs, especially web applications. It provides various tools and features that make it easier for programmers to create software. Some of the things Spring helps with include handling data from a database, making web pages look nice, and managing different parts of a program so they work together smoothly.
+
+**Dependencies:**
+Imagine you're building something with LEGO bricks. You might need different types of LEGO pieces to make your creation. Dependencies in Spring are like these LEGO pieces. They are other pieces of software that your program needs to work correctly. Spring uses these dependencies to do its job. Think of them as tools that Spring relies on to help you build your program effectively.
+
+So, Spring is the toolbox that makes building software easier, and dependencies are like the LEGO pieces that Spring uses to get the job done. Together, they help programmers create software more efficiently and with fewer headaches.
+
+
+Basically Spring helps in creating and handling the object so that the coder can use them with the help of the dependencies.
