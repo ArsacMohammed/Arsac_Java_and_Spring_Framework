@@ -8,9 +8,9 @@
 </head>
 <body>
 Welcome to Arsac Page
-<form action ="add">
-Number1 :<input type="text" name="num1"></br>
-Number2 :<input type="text" name="num2"></br>
+<form action ="addAlien">
+Enter your Id :<input type="text" name="aid"></br>
+Enter your Name :<input type="text" name="aname"></br>
 <input type="submit">
 </form>
 
