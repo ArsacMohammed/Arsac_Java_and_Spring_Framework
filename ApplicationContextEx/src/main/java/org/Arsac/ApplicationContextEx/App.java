@@ -10,19 +10,19 @@ public class App
     public static void main( String[] args )
     {
     	
-    	//  Instead of using classPathApplicationResource ive used FileSystemXmlApplicatinContext to avoid confusion.
     	String fullPath = "C:\\Users\\mm\\Java_Full_Stack_Develop\\Spring 5 _Telusko_learn\\SpringWorkspace\\ApplicationContextEx\\src\\main\\java\\org\\Arsac\\ApplicationContextEx\\spring.xml";
     	ApplicationContext factory = new FileSystemXmlApplicationContext(fullPath);
     	Alien obj = (Alien) factory.getBean("alien"); 
     	obj.code();
     	obj.age=15;
     	System.out.println(obj.age);
-    	//  when i did this like for setting obj.age=15 then for obj1.age also addigned to 15 because both  the object created are singleton obejcts and both the object refer to the same reference in spring container
+    	
     	Alien obj1 = (Alien) factory.getBean("alien"); 
     	obj1.code();
+    	// now i ve have used scope in the spring.xml file because this scope used as prototype for creating different object rather like singleton object which makes object refer to same reference.
+    	//the obj1.age is now zero.
     	
-    	
-    	System.out.println(obj.age);
+    	System.out.println(obj1.age);
         
     }
 }
