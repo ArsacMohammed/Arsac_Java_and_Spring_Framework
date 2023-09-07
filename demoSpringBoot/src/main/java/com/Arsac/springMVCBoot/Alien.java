@@ -1,13 +1,13 @@
 package com.Arsac.springMVCBoot;
 
 public class Alien {
-	int id;
+	int aid;
 	String aname;
-	public int getId() {
-		return id;
+	public int getAid() {
+		return aid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setAid(int aid) {
+		this.aid = aid;
 	}
 	public String getAname() {
 		return aname;
@@ -17,7 +17,7 @@ public class Alien {
 	}
 	@Override
 	public String toString() {
-		return "Alien [id=" + id + ", aname=" + aname + "]";
+		return "Alien [aid=" + aid + ", aname=" + aname + "]";
 	}
 	
 }
