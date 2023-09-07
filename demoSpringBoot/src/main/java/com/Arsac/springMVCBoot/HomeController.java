@@ -12,6 +12,11 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
+	
+	@ModelAttribute   // you can also do this in addAlien method but doing here assign before executing the other method
+	public void modelName(Model m) {
+		m.addAttribute("name","Arsac");
+	}
 	@RequestMapping("/")
 
 	public String home() {
@@ -31,10 +36,8 @@ public class HomeController {
     
 	
 	@RequestMapping("addAlien")
-//	public String  addAlien(@ModelAttribute Alien alien,Model m) {  or we can do like the below
 	public String  addAlien(@ModelAttribute("alien") Alien a,Model m) {
-//		m.addAttribute("alien",a);(dont want this line ) because // @ModelAttribite is responsible to add data to the model when client gives inputin the form
-// we have to mention 'alien' somewhere that why we add alien near the model attribute
+
 		return "result";
 		
 	}
