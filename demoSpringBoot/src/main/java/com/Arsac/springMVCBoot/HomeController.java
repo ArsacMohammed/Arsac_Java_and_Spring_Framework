@@ -34,8 +34,12 @@ public class HomeController {
 		return "result";
 	}
     
-	
-	@RequestMapping("addAlien")
+	// post method doesnot send data via url and get method does 
+	// to note use post when sending data to the server and use get when fetching data from the server.
+	@RequestMapping("addAlien")  // this work for both post and get method type 
+	//you can also do
+	//@PostMapping("addAlien")   or @RequestMapping("addAlien",method=RequestMethod.POST)
+	//@GetMapping("addAlien")   or @RequestMapping("addAlien",method=RequestMethod.GET)
 	public String  addAlien(@ModelAttribute("alien") Alien a,Model m) {
 
 		return "result";
