@@ -1,6 +1,11 @@
 package com.Arsac.springMVCBoot;
 
 public class Alien {
+	public Alien(int aid, String aname) {
+		super();
+		this.aid = aid;
+		this.aname = aname;
+	}
 	int aid;
 	String aname;
 	public int getAid() {
