@@ -15,6 +15,14 @@ public class App
     	ApplicationContext factory = new FileSystemXmlApplicationContext(fullPath);
     	Alien obj = (Alien) factory.getBean("alien"); 
     	obj.code();
+    	obj.age=15;
+    	System.out.println(obj.age);
+    	//  when i did this like for setting obj.age=15 then for obj1.age also addigned to 15 because both  the object created are singleton obejcts and both the object refer to the same reference in spring container
+    	Alien obj1 = (Alien) factory.getBean("alien"); 
+    	obj1.code();
+    	
+    	
+    	System.out.println(obj.age);
         
     }
 }
