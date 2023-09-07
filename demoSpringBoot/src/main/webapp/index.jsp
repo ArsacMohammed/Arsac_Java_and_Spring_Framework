@@ -8,10 +8,10 @@
 </head>
 <body>
 Welcome to Arsac Page
-<form aciton ="add">
+<form action ="add">
 Number1 :<input type="text" name="number"></br>
 Number2 :<input type="text" name="number2"></br>
-<input type="summit">
+<input type="submit">
 </form>
 
 
