@@ -9,12 +9,10 @@
 <body>
 Welcome to Arsac Page
 <form action ="add">
-Number1 :<input type="text" name="number"></br>
-Number2 :<input type="text" name="number2"></br>
+Number1 :<input type="text" name="num1"></br>
+Number2 :<input type="text" name="num2"></br>
 <input type="submit">
 </form>
-
-
 
 </body>
 </html>
