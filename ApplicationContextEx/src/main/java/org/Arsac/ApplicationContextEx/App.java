@@ -14,15 +14,10 @@ public class App
     	ApplicationContext factory = new FileSystemXmlApplicationContext(fullPath);
     	Alien obj = (Alien) factory.getBean("alien"); 
     	obj.code();
-    	obj.age=15;
-    	System.out.println(obj.age);
-    	
-    	Alien obj1 = (Alien) factory.getBean("alien"); 
-    	obj1.code();
-    	// now i ve have used scope in the spring.xml file because this scope used as prototype for creating different object rather like singleton object which makes object refer to same reference.
-    	//the obj1.age is now zero.
-    	
-    	System.out.println(obj1.age);
+    	//we can eihter set here or in xml file
+    	//obj.setAge(15);
+    	System.out.println(obj.getAge());
+    	   	
         
     }
 }
