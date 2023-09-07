@@ -29,3 +29,9 @@ what is autowired:
 In simple terms, `@Autowired` is like a magic tag in the Spring programming world. When you put `@Autowired` on something (usually a variable or method), Spring takes care of finding and connecting the right pieces of your program together.
 
 Imagine you're building a puzzle, and each piece represents a part of your software. `@Autowired` helps you find the right pieces and fit them together automatically, so you don't have to do all the searching and connecting yourself. It's like having a helpful assistant that knows where all the puzzle pieces belong and puts them in the right spots for you.
+
+
+
+Since xmlBeanfactory is only available in the older version of spring framework , lets move to the next topic
+
+ 
