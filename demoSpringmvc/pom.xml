@@ -22,6 +22,43 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+    	<groupId>org.hibernate.orm</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>6.1.7.Final</version>
+	</dependency>
+
+
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-orm</artifactId>
+    	<version>6.0.11</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-tx</artifactId>
+    	<version>6.0.11</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.mysql</groupId>
+    	<artifactId>mysql-connector-j</artifactId>
+    	<version>8.1.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.mchange</groupId>
+    	<artifactId>c3p0</artifactId>
+    	<version>0.9.5.5</version>
+	</dependency>
+
+
+
+
+
+	<dependency>
+		<groupId>org.Arsac</groupId>
+		<artifactId>ApplicationContextEx</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>demoSpringmvc</finalName>

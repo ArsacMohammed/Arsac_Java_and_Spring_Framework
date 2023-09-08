@@ -30,7 +30,6 @@ public class HomeController {
 		return "showAliens";
 	}
 	@RequestMapping("/")
-
 	public String home() {
 		System.out.println("helo");
 		return "index";

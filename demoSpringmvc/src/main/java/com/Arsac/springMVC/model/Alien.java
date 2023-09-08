@@ -1,6 +1,14 @@
-package com.Arsac.springMVC;
+package com.Arsac.springMVC.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Alien {
+
+	
+	
+	@Id
 	int aid;
 	String aname;
 	public int getAid() {
