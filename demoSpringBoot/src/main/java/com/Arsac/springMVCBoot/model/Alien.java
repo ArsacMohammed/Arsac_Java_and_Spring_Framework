@@ -1,4 +1,4 @@
-package com.Arsac.springMVCBoot;
+package com.Arsac.springMVCBoot.model;
 
 public class Alien {
 	public Alien(int aid, String aname) {
