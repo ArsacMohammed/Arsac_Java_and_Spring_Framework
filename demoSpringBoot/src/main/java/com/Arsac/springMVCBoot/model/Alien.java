@@ -1,11 +1,21 @@
 package com.Arsac.springMVCBoot.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity   // we pass the method as entity.
 public class Alien {
+	
+	
+	public Alien() {
+	}
+	
 	public Alien(int aid, String aname) {
 		super();
 		this.aid = aid;
 		this.aname = aname;
 	}
+	@Id
 	int aid;
 	String aname;
 	public int getAid() {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,20 +17,21 @@ import com.Arsac.springMVCBoot.model.Alien;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
-
+// in the previous commit we have addded two dependencies like mySQL connector and springBoot data , and no  need to add any other depend' because spring boot will take care of it .
 
 @Controller
 public class HomeController {
-	
-	@ModelAttribute   // you can also do this in addAlien method but doing here assign before executing the other method
+	@Autowired
+	AlienRepo repo;
+	@ModelAttribute   
 	public void modelName(Model m) {
 		m.addAttribute("name","Arsac");
 	}
 	
 	@GetMapping("getAliens")
 	public String getAliens(Model m) {
-		List<Alien> a =Arrays.asList(new Alien(101,"Navin"),new Alien(102,"Arsac"),new Alien(103,"QWER"));
-		m.addAttribute("result",a);
+		/// can view all the funciton by type repo. because repo is declared at the top.
+		m.addAttribute("result",repo.findAll());
 		return "showAliens";
 	}
 	@RequestMapping("/")
@@ -40,10 +42,6 @@ public class HomeController {
 	@RequestMapping("add")
 	public String add (@RequestParam("num1") int i,@RequestParam("num2") int j,Model m){
 		int num3=i+j;
-
-//		ModelAndView mv = new ModelAndView("result");  // this also works
-//		mv.addObject("num3",num3);
-//	    mv.setViewName("result"); //no need
 		m.addAttribute("num3",num3);
 		return "result";
 	}
