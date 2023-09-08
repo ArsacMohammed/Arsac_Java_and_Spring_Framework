@@ -13,6 +13,11 @@ Enter your Id :<input type="text" name="aid"></br>
 Enter your Name :<input type="text" name="aname"></br>
 <input type="submit">
 </form>
+<hr>
+<form action ="getAlien" method="post">
+Enter your Id :<input type="text" name="aid"></br>
+<input type="submit">
+</form>
 
 </body>
 </html>

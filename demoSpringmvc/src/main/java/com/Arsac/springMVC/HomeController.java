@@ -27,14 +27,22 @@ public class HomeController {
 		m.addAttribute("result",dao.getAliens());
 		return "showAliens";
 	}
+	
 	@RequestMapping("/")
-
 	public String home() {
 		System.out.println("helo");
 		return "index";
 	}
-	
-	
+	@RequestMapping("addAlien")
+	 public String addAlien(@ModelAttribute("result") Alien a) {
+		dao.addAlien(a);
+		return "showAliens";
+	}
+	@RequestMapping("getAlien")
+	public String getAlien(@RequestParam int aid,Model m) {
+		m.addAttribute("result",dao.getAlien(aid));
+		return "showAliens";
+	}
 	
 }
 
