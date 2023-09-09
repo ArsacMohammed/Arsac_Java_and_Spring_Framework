@@ -28,10 +28,15 @@ public class AlienControlller {
 		Alien a = repo.findById(aid).orElse(new Alien(0,"")); // orElse is present to ensure  if the id is not present in the database we will return (0,");
 		return a;
 	}
-	@PostMapping("alien")// note get is to fetch the information from the server and post is to send the information to the server.
+	@PostMapping("alien")
 	public Alien addAlien(Alien a) {
 		repo.save(a);
 		return a;
-	}// instead of using forms to get the input , we use postname change the option to post ,in the param area ,enter the key value as aid or aname and in the value area enter the respective values.
+	}
 }
-/// since  we using @ responsebody for each method for converting, we can change the @Controller to @RestController and remove @Response body above each method that is responsible for converting
+// content negotiation mean the data file could in jason or xml format , jackson  jason is inbuilt as jar in maven , we have to add jackson datasource xml  dependencies in pom file
+//after adding it ,it will show error related to url so configure the application properties with
+//spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS=false
+//spring.jackson.dataformat.xml.default_useWrapper=false
+
+// make sure in header in postman you enter Accept in key and application/xml in the value and press enter in get 
