@@ -11,3 +11,4 @@ public class HomeController {
 	}
 }
 
+//just by adding spring boot starter security depenency ,you can get login page nothing else.
