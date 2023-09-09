@@ -29,7 +29,11 @@ Enter your Name :<input type="text" name="aname"></br>
 Enter your Name order :<input type="text" name="aname"></br>
 <input type="submit">
 </form>
-
+<hr>
+<form action ="getAlienUsingQuery" method="get">
+Enter your Name order :<input type="text" name="aname"></br>
+<input type="submit">
+</form>
 
 </body>
 </html>

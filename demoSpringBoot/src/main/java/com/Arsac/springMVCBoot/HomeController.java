@@ -52,6 +52,12 @@ public class HomeController {
 		return "showAliens";
 	}
 	
+	
+	@GetMapping("getAlienUsingQuery")
+	public String getAlienUsingQuery(Model m,@RequestParam String aname) {
+		m.addAttribute("result",repo.find(aname));
+		return "showAliens";
+	}
 	@RequestMapping("addAlien")  
 
 	public String  addAlien(@ModelAttribute("alien") Alien a,Model m) {
