@@ -24,3 +24,13 @@
 2023-09-09T15:27:09.513+05:30  INFO 5528 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2023-09-09T15:27:09.749+05:30  INFO 5528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-09-09T15:27:09.760+05:30  INFO 5528 --- [main] c.A.s.DemoSpringBootApplication          : Started DemoSpringBootApplication in 5.562 seconds (process running for 6.224)
+2023-09-09T15:29:09.239+05:30  INFO 5528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-09T15:29:09.239+05:30  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-09T15:29:09.241+05:30  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-09T15:29:09.283+05:30  INFO 5528 --- [http-nio-8080-exec-1] com.Arsac.springMVCBoot.LoggingAspect    : Execution of getMethod Initialised......
+2023-09-09T15:38:04.109+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-09-09T15:38:04.130+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-09T15:38:04.133+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-09T15:38:04.143+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-09T15:38:04.146+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-09T15:38:04.157+05:30  INFO 5528 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
