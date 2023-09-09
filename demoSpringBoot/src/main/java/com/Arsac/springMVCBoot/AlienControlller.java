@@ -17,8 +17,7 @@ public class AlienControlller {
 	@Autowired
 	AlienRepo repo;
 	
-	@GetMapping(path="aliens",produces= {"application/json"})// restrict the access  to only xml
-	//and have to mention at the header part  in postman as Accept in key and application-xml or application/json based on requirement    .... basically it returns the file from  the server as respective format.
+	@GetMapping(path="aliens",produces= {"application/json"})
 
 	public List<Alien> getAliens() {
 		List<Alien> aliens= repo.findAll();
@@ -27,16 +26,11 @@ public class AlienControlller {
 	@GetMapping("alien/{aid}")
 	
 	public Alien getalienById(@PathVariable("aid") int aid) {
-		Alien a = repo.findById(aid).orElse(new Alien(0,"")); // orElse is present to ensure  if the id is not present in the database we will return (0,");
+		Alien a = repo.findById(aid).orElse(new Alien(0,"")); 
 		return a;
 	}
-	@PostMapping(path="alien",consumes = {"application/json"})  // consumes restrict the input as json and have to mention that in header part as ContentType as application/json and write the code as 
-//	{
-//    "aid": 110,
-//    "aname": "Aasha"
-//} as this in raw part of the body in postman  --- consumes basically produce the data as respective format based on the data file type 
-
-	public Alien addAlien(@RequestBody Alien a) {  /// @ Request body convert the json into java object where the @ReponseBody convert the java object to json or xml to the server.  --- 
+	@PostMapping(path="alien",consumes = {"application/json"}) 
+	public Alien addAlien(@RequestBody Alien a) { 
 		repo.save(a);
 		return a;
 	}

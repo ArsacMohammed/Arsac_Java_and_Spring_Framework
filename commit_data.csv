@@ -1,0 +1,32 @@
+d6b5410,ArsacMohammed,2023-09-09 12:21:22 +0530,RequestBody and Consumes Attribute and completed Spring Rest
+1bd9e33,ArsacMohammed,2023-09-09 11:57:27 +0530, produces attribute in REST
+a948f31,ArsacMohammed,2023-09-09 11:37:09 +0530,contentNeogtiation for xml file ,added applicaton properites for xml jar with postman
+1f8798e,ArsacMohammed,2023-09-09 11:09:27 +0530,@PostMapping ,send data to the server ,with postman
+3777158,ArsacMohammed,2023-09-09 10:52:59 +0530,@RestController is added and @ResponseBody is removed
+164d7bb,ArsacMohammed,2023-09-09 10:47:12 +0530,pathvariable picking by one particular id
+8103610,ArsacMohammed,2023-09-09 09:42:52 +0530,installed postman ,rest getmappping and jackson are done
+ed20268,ArsacMohammed,2023-09-09 08:38:09 +0530,added for Query Annotation
+e7ea5c8,ArsacMohammed,2023-09-09 08:29:03 +0530,added  for QueryDSL
+41abae8,ArsacMohammed,2023-09-08 19:33:48 +0530,added jpa repository in springboot instead of using aliendao in springmvc
+902c184,ArsacMohammed,2023-09-08 17:41:08 +0530,Spring data JPA configuration
+95b9763,ArsacMohammed,2023-09-08 17:18:24 +0530,add and fetch from database is done
+641d80b,ArsacMohammed,2023-09-08 15:54:21 +0530,hibernate config and dao creation is done (takes a lot of time
+9903584,ArsacMohammed,2023-09-08 00:41:30 +0530,added files for get maping
+a897716,ArsacMohammed,2023-09-07 23:59:11 +0530,added post method in index and added noted on homecontroller.java
+614a6db,ArsacMohammed,2023-09-07 23:49:32 +0530, added Arsac-servet.xml to config the serveltdispatcher and created the servelt and servelts mapping in web.xml
+0408376,ArsacMohammed,2023-09-07 22:57:02 +0530,added new file for springmcv and congfigured it,added dependencies for spring web mvc
+ca1b832,ArsacMohammed,2023-09-07 21:21:29 +0530,modelAttribute as method label or annotation
+97c0352,ArsacMohammed,2023-09-07 21:12:38 +0530,ModelAttribute implementation
+fd988eb,ArsacMohammed,2023-09-07 20:00:15 +0530,need of model attribute
+ac37de9,ArsacMohammed,2023-09-07 19:16:46 +0530,Model and ModelMap
+118bb16,ArsacMohammed,2023-09-07 18:23:12 +0530,added prefix and suffix for security concerns
+5e8a166,ArsacMohammed,2023-09-07 18:12:42 +0530,ModelAndView files added
+8d60b4c,ArsacMohammed,2023-09-07 18:03:57 +0530,@RequestParam
+5b3848f,ArsacMohammed,2023-09-07 17:41:12 +0530,Accepting user input
+5761d92,ArsacMohammed,2023-09-07 17:05:51 +0530,created new project and print hello in console
+b092b18,ArsacMohammed,2023-09-07 11:03:42 +0530, setter injection
+85c285d,ArsacMohammed,2023-09-07 10:40:59 +0530,singleton vs protoytpe in scope
+0caa41f,ArsacMohammed,2023-09-07 10:32:51 +0530,added spring container files
+995b900,ArsacMohammed,2023-09-07 10:22:30 +0530,added files for applicaiton context
+53ba1a0,ArsacMohammed,2023-09-06 18:09:52 +0530,added dependencies injection and Spring Autowried content in firstProject ,notes added
+4ee632d,ArsacMohammed,2023-09-06 17:33:29 +0530,initial commit
