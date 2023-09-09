@@ -39,21 +39,37 @@ public class HomeController {
 		System.out.println("helo");
 		return "index";
 	}
-	@RequestMapping("add")
-	public String add (@RequestParam("num1") int i,@RequestParam("num2") int j,Model m){
-		int num3=i+j;
-		m.addAttribute("num3",num3);
-		return "result";
+
+	@GetMapping("getAlienByAname")
+	public String getAlienByAname(Model m,@RequestParam String aname) {
+		m.addAttribute("result",repo.findByAname(aname));
+		return "showAliens";
+	}///work fine
+	
+	@GetMapping("getAlienByAnameOrderByAname")
+	public String getAlienByAnameOrderByAname(Model m,@RequestParam String aname) {
+		m.addAttribute("result",repo.findByAnameOrderByAname(aname));
+		return "showAliens";
 	}
-    
 	
 	@RequestMapping("addAlien")  
 
 	public String  addAlien(@ModelAttribute("alien") Alien a,Model m) {
-
+		repo.save(a);
 		return "result";
 		
 	}
+	
+	
+	@GetMapping("getAlien")
+	public String getAlien(Model m,@RequestParam int aid) {
+		/// can view all the funciton by type repo. because repo is declared at the top.
+		m.addAttribute("result",repo.findById(aid));
+		return "showAliens";
+	}
+	
+	//  getting alien by name by not using using inbuilt functino of jpa repo. rather by using querydsl.
+
 	
 }
 

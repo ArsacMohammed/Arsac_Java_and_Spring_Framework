@@ -13,6 +13,23 @@ Enter your Id :<input type="text" name="aid"></br>
 Enter your Name :<input type="text" name="aname"></br>
 <input type="submit">
 </form>
+<hr>
+<form action ="getAlien" method="get">
+Enter your Id :<input type="text" name="aid"></br>
+<input type="submit">
+</form>
+
+<hr>
+<form action ="getAlienByAname" method="get">
+Enter your Name :<input type="text" name="aname"></br>
+<input type="submit">
+</form>
+<hr>
+<form action ="getAlienByAnameOrderByAname" method="get">
+Enter your Name order :<input type="text" name="aname"></br>
+<input type="submit">
+</form>
+
 
 </body>
 </html>
