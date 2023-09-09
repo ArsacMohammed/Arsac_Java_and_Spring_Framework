@@ -16,8 +16,8 @@ public class AlienControlller {
 	@Autowired
 	AlienRepo repo;
 	
-	@GetMapping("aliens")
-	 /// this send data rather than sending jsp like in homecontroller (configured as prefix and suffix in the appilication properties.
+	@GetMapping(path="aliens",produces= {"application/xml"})// restrict the access  to only xml 
+
 	public List<Alien> getAliens() {
 		List<Alien> aliens= repo.findAll();
 		return aliens;   // 
@@ -34,9 +34,3 @@ public class AlienControlller {
 		return a;
 	}
 }
-// content negotiation mean the data file could in jason or xml format , jackson  jason is inbuilt as jar in maven , we have to add jackson datasource xml  dependencies in pom file
-//after adding it ,it will show error related to url so configure the application properties with
-//spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS=false
-//spring.jackson.dataformat.xml.default_useWrapper=false
-
-// make sure in header in postman you enter Accept in key and application/xml in the value and press enter in get 
