@@ -1,6 +1,8 @@
 package com.Arsac.springMVCBoot;
 
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -18,8 +20,14 @@ public class LoggingAspect {
 	}
 	
 	
-	@After("execution(public * com.Arsac.springMVCBoot.AlienControlller.getAliens())")
-	public void logAfter() {
-		LOGGER.info("Execution of getMethod is completed......");
-	}// by default this @After is After(finally) wrt spring aop doc 
+	@AfterReturning("execution(public * com.Arsac.springMVCBoot.AlienControlller.getAliens())")
+	public void logAfterReturning() {
+		LOGGER.info("Execution successfull....");
+	}// by default this @AfterReturning  show only after successul execution.
+	
+	@AfterThrowing("execution(public * com.Arsac.springMVCBoot.AlienControlller.getAliens())")
+	public void logAfterException() {
+		LOGGER.info("issue....");
+	}// this will show when issue or exception arises
 }
+

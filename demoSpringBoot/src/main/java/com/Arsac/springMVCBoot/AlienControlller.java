@@ -21,6 +21,7 @@ public class AlienControlller {
 
 	public List<Alien> getAliens() {
 		List<Alien> aliens= repo.findAll();
+
 		return aliens;   // 
 	}
 	@GetMapping("alien/{aid}")
