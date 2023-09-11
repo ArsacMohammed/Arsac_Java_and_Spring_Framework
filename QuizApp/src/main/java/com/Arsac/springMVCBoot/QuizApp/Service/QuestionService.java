@@ -19,5 +19,9 @@ public class QuestionService {
 		return  questionDao.findByCategory(category);
 		
 	}
+	public Question addQuestion(Question question) {
+		
+		return questionDao.save(question);
+	}
 
 }
