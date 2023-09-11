@@ -1,6 +1,8 @@
 package com.Arsac.springMVCBoot.QuizApp.Controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,18 +20,17 @@ public class QuestionController {
 	QuestionService questionService;
 	@GetMapping(value="allQuestions",produces="application/json")
 	
-	public List<Question>getQuestions() {
+	public ResponseEntity<List<Question>>getQuestions() {
 		System.out.println("hello");
 		return questionService.getQuestions();
 		
 	}
 	@GetMapping("category/{cat}")
-	public List<Question> getQuestionsByCategory(@PathVariable("cat") String category){
+	public ResponseEntity<List<Question>> getQuestionsByCategory(@PathVariable("cat") String category){
 		return questionService.getQuestionsByCategory(category);
 	}
 	@PostMapping("addQuestion")
-	public String addQuestion(@RequestBody Question question) {
-		questionService.addQuestion(question);
-		return "success";
+	public ResponseEntity<String> addQuestion(@RequestBody Question question) {
+		return questionService.addQuestion(question);
 	}
 }

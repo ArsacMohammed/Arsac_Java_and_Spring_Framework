@@ -1,8 +1,11 @@
 package com.Arsac.springMVCBoot.QuizApp.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.Arsac.springMVCBoot.QuizApp.Question;
@@ -12,16 +15,27 @@ import com.Arsac.springMVCBoot.QuizApp.dao.QuestionDao;
 public class QuestionService {
 	@Autowired
 	QuestionDao questionDao;
-	public List<Question> getQuestions() {
-		return questionDao.findAll();
+	public ResponseEntity<List<Question>> getQuestions() {
+		try {
+			return new ResponseEntity<>(questionDao.findAll(),HttpStatus.OK);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return new ResponseEntity<>(new ArrayList<>(),HttpStatus.OK);
 	}
-	public List<Question> getQuestionsByCategory(String category) {
-		return  questionDao.findByCategory(category);
+	public ResponseEntity<List<Question>> getQuestionsByCategory(String category) {
+
+		try {
+			return new ResponseEntity<>(questionDao.findAll(),HttpStatus.OK);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return new ResponseEntity<>(new ArrayList<>(),HttpStatus.BAD_REQUEST);
 		
 	}
-	public Question addQuestion(Question question) {
-		
-		return questionDao.save(question);
+	public ResponseEntity<String>addQuestion(Question question) {
+		questionDao.save(question);
+		return new ResponseEntity<>("success",HttpStatus.CREATED);
 	}
 
 }
