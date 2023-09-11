@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
- // this is from lombok which here uses to create getter and seter method.
+ // use lombok -- cause empty json here inn output..
 @Entity
 @Table(name="question")
 public class Question {

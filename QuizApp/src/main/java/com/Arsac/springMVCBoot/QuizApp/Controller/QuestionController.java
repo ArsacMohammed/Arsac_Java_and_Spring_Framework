@@ -2,6 +2,7 @@ package com.Arsac.springMVCBoot.QuizApp.Controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,6 @@ import com.Arsac.springMVCBoot.QuizApp.Question;
 import com.Arsac.springMVCBoot.QuizApp.Service.QuestionService;
 @RestController
 @RequestMapping("/question")
-
 public class QuestionController {
 	@Autowired
 	QuestionService questionService;
@@ -20,6 +20,10 @@ public class QuestionController {
 		System.out.println("hello");
 		return questionService.getQuestions();
 		
+	}
+	@GetMapping("category/{cat}")
+	public List<Question> getQuestionsByCategory(@PathVariable("cat") String category){
+		return questionService.getQuestionsByCategory(category);
 	}
 }
 /// client - controller - service layer - dao layer - database (from server)
