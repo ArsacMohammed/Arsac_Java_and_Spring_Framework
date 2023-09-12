@@ -1,0 +1,80 @@
+create database questiondb;
+CREATE TABLE question (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(100) NOT NULL,
+    difficultylevel VARCHAR(100) NOT NULL,
+    option1 TEXT NOT NULL,
+    option2 TEXT NOT NULL,
+    option3 TEXT NOT NULL,
+    option4 TEXT NOT NULL,
+    question_title TEXT NOT NULL,
+    right_answer TEXT NOT NULL
+);
+-- Insert 10 Java questions with 'easy' difficulty
+INSERT INTO question (id, category, difficultylevel, option1, option2, option3, option4, question_title, right_answer)
+VALUES
+  (1, 'Java', 'easy', 'inheritance', 'encapsulation', 'abstraction', 'float', 'Which is not an OOPs concept?', 'float'),
+  (2, 'Java', 'easy', 'class', 'object', 'variable', 'method', 'What is a blueprint for creating objects?', 'class'),
+  (3, 'Java', 'easy', 'compile-time', 'runtime', 'load-time', 'link-time', 'When is Java code converted to machine code?', 'compile-time'),
+  (4, 'Java', 'easy', 'true', 'false', 'null', 'undefined', 'In Java, is 10 > 9?', 'true'),
+  (5, 'Java', 'easy', 'String', 'Integer', 'Double', 'Boolean', 'Which data type is used for text in Java?', 'String'),
+  (6, 'Java', 'easy', 'public', 'private', 'protected', 'static', 'Which access modifier allows a member to be accessed from anywhere?', 'public'),
+  (7, 'Java', 'easy', 'new', 'malloc', 'alloc', 'create', 'What keyword is used to allocate memory for an object in Java?', 'new'),
+  (8, 'Java', 'easy', 'constructor', 'destructor', 'initializer', 'finalize', 'What is called when an object is created in Java?', 'constructor'),
+  (9, 'Java', 'easy', 'Java Virtual Machine', 'Java Compiler', 'Java Debugger', 'Java Executor', 'What executes Java bytecode?', 'Java Virtual Machine'),
+  (10, 'Java', 'easy', 'Java Development Kit', 'Java Runtime Environment', 'Java Standard Edition', 'Java Enterprise Edition', 'What does JDK stand for in Java?', 'Java Development Kit');
+
+-- Insert 10 Python questions with 'easy' difficulty
+INSERT INTO question (id, category, difficultylevel, option1, option2, option3, option4, question_title, right_answer)
+VALUES
+  (11, 'Python', 'easy', 'list', 'tuple', 'dictionary', 'set', 'Which data structure is ordered and changeable?', 'list'),
+  (12, 'Python', 'easy', 'True', 'False', 'None', 'NaN', 'In Python, is 10 > 9?', 'True'),
+  (13, 'Python', 'easy', 'def', 'func', 'function', 'define', 'What keyword is used to define a function in Python?', 'def'),
+  (14, 'Python', 'easy', 'float', 'int', 'str', 'bool', 'Which data type is used for true or false values in Python?', 'bool'),
+  (15, 'Python', 'easy', 'for', 'while', 'do-while', 'repeat', 'Which loop is used to iterate over a sequence (e.g., list, tuple, dictionary)?', 'for'),
+  (16, 'Python', 'easy', 'Python Compiler', 'Python Interpreter', 'Python Executor', 'Python Virtual Machine', 'What executes Python code?', 'Python Interpreter'),
+  (17, 'Python', 'easy', 'append()', 'insert()', 'add()', 'push()', 'Which method is used to add an element to the end of a list in Python?', 'append()'),
+  (18, 'Python', 'easy', 'len()', 'size()', 'length()', 'count()', 'Which function is used to get the number of items in a list in Python?', 'len()'),
+  (19, 'Python', 'easy', 'else', 'otherwise', 'elsif', 'elif', 'What keyword is used to define an alternative action in an if statement in Python?', 'elif'),
+  (20, 'Python', 'easy', 'print()', 'display()', 'show()', 'output()', 'Which function is used to display the output in Python?', 'print()');
+
+select * from question;
+use questiondb;
+select * from question;
+CREATE TABLE question (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(100) NOT NULL,
+    difficultylevel VARCHAR(100) NOT NULL,
+    option1 TEXT NOT NULL,
+    option2 TEXT NOT NULL,
+    option3 TEXT NOT NULL,
+    option4 TEXT NOT NULL,
+    question_title TEXT NOT NULL,
+    right_answer TEXT NOT NULL
+);
+INSERT INTO question (id, category, difficultylevel, option1, option2, option3, option4, question_title, right_answer)
+VALUES
+  (1, 'Java', 'easy', 'inheritance', 'encapsulation', 'abstraction', 'float', 'Which is not an OOPs concept?', 'float'),
+  (2, 'Java', 'easy', 'class', 'object', 'variable', 'method', 'What is a blueprint for creating objects?', 'class'),
+  (3, 'Java', 'easy', 'compile-time', 'runtime', 'load-time', 'link-time', 'When is Java code converted to machine code?', 'compile-time'),
+  (4, 'Java', 'easy', 'true', 'false', 'null', 'undefined', 'In Java, is 10 > 9?', 'true'),
+  (5, 'Java', 'easy', 'String', 'Integer', 'Double', 'Boolean', 'Which data type is used for text in Java?', 'String'),
+  (6, 'Java', 'easy', 'public', 'private', 'protected', 'static', 'Which access modifier allows a member to be accessed from anywhere?', 'public'),
+  (7, 'Java', 'easy', 'new', 'malloc', 'alloc', 'create', 'What keyword is used to allocate memory for an object in Java?', 'new'),
+  (8, 'Java', 'easy', 'constructor', 'destructor', 'initializer', 'finalize', 'What is called when an object is created in Java?', 'constructor'),
+  (9, 'Java', 'easy', 'Java Virtual Machine', 'Java Compiler', 'Java Debugger', 'Java Executor', 'What executes Java bytecode?', 'Java Virtual Machine'),
+  (10, 'Java', 'easy', 'Java Development Kit', 'Java Runtime Environment', 'Java Standard Edition', 'Java Enterprise Edition', 'What does JDK stand for in Java?', 'Java Development Kit');
+
+-- Insert 10 Python questions with 'easy' difficulty
+INSERT INTO question (id, category, difficultylevel, option1, option2, option3, option4, question_title, right_answer)
+VALUES
+  (11, 'Python', 'easy', 'list', 'tuple', 'dictionary', 'set', 'Which data structure is ordered and changeable?', 'list'),
+  (12, 'Python', 'easy', 'True', 'False', 'None', 'NaN', 'In Python, is 10 > 9?', 'True'),
+  (13, 'Python', 'easy', 'def', 'func', 'function', 'define', 'What keyword is used to define a function in Python?', 'def'),
+  (14, 'Python', 'easy', 'float', 'int', 'str', 'bool', 'Which data type is used for true or false values in Python?', 'bool'),
+  (15, 'Python', 'easy', 'for', 'while', 'do-while', 'repeat', 'Which loop is used to iterate over a sequence (e.g., list, tuple, dictionary)?', 'for'),
+  (16, 'Python', 'easy', 'Python Compiler', 'Python Interpreter', 'Python Executor', 'Python Virtual Machine', 'What executes Python code?', 'Python Interpreter'),
+  (17, 'Python', 'easy', 'append()', 'insert()', 'add()', 'push()', 'Which method is used to add an element to the end of a list in Python?', 'append()'),
+  (18, 'Python', 'easy', 'len()', 'size()', 'length()', 'count()', 'Which function is used to get the number of items in a list in Python?', 'len()'),
+  (19, 'Python', 'easy', 'else', 'otherwise', 'elsif', 'elif', 'What keyword is used to define an alternative action in an if statement in Python?', 'elif'),
+  (20, 'Python', 'easy', 'print()', 'display()', 'show()', 'output()', 'Which function is used to display the output in Python?', 'print()');
