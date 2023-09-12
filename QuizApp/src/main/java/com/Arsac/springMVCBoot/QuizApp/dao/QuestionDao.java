@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.Arsac.springMVCBoot.QuizApp.Question;
+import com.Arsac.springMVCBoot.QuizApp.model.Question;
 
 public interface QuestionDao extends JpaRepository<Question,Integer>{
 

@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Arsac.springMVCBoot.QuizApp.Service.QuizService;
+import com.Arsac.springMVCBoot.QuizApp.model.QuestionWrapper;
+import com.Arsac.springMVCBoot.QuizApp.model.Response;
+
 @RestController
 @RequestMapping("quiz")
 public class QuizController {

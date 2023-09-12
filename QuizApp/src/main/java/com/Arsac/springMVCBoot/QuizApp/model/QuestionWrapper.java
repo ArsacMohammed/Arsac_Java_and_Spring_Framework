@@ -1,4 +1,4 @@
-package com.Arsac.springMVCBoot.QuizApp.Controller;
+package com.Arsac.springMVCBoot.QuizApp.model;
 
 public class QuestionWrapper {
 	int id;

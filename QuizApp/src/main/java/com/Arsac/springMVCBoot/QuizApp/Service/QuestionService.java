@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.Arsac.springMVCBoot.QuizApp.Question;
 import com.Arsac.springMVCBoot.QuizApp.dao.QuestionDao;
+import com.Arsac.springMVCBoot.QuizApp.model.Question;
 
 @Service
 public class QuestionService {

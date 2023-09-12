@@ -1,8 +1,6 @@
-package com.Arsac.springMVCBoot.QuizApp.Controller;
+package com.Arsac.springMVCBoot.QuizApp.model;
 
 import java.util.List;
-
-import com.Arsac.springMVCBoot.QuizApp.Question;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

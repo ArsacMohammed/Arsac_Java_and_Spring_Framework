@@ -1,4 +1,4 @@
-package com.Arsac.springMVCBoot.QuizApp.Controller;
+package com.Arsac.springMVCBoot.QuizApp.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.Arsac.springMVCBoot.QuizApp.Question;
 import com.Arsac.springMVCBoot.QuizApp.dao.QuestionDao;
+import com.Arsac.springMVCBoot.QuizApp.dao.Quizdao;
+import com.Arsac.springMVCBoot.QuizApp.model.Question;
+import com.Arsac.springMVCBoot.QuizApp.model.QuestionWrapper;
+import com.Arsac.springMVCBoot.QuizApp.model.Quiz;
+import com.Arsac.springMVCBoot.QuizApp.model.Response;
 
 @Service
 public class QuizService {

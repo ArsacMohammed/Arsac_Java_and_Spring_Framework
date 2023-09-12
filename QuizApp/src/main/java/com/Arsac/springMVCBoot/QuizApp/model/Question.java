@@ -1,4 +1,4 @@
-package com.Arsac.springMVCBoot.QuizApp;
+package com.Arsac.springMVCBoot.QuizApp.model;
 
 
 import jakarta.persistence.Entity;

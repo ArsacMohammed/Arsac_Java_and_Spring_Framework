@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Arsac.springMVCBoot.QuizApp.Question;
 import com.Arsac.springMVCBoot.QuizApp.Service.QuestionService;
+import com.Arsac.springMVCBoot.QuizApp.model.Question;
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
