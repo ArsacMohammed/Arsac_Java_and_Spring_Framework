@@ -35,3 +35,7 @@ public class QuestionController {
 		return questionService.addQuestion(question);
 	}
 }
+//generate 
+//getQuestion(question_id)
+//calculateScore() these all have to done here because it has all the resources in the question service 
+//instead of connecting the quiz to  the question database ,we use http to connect the quiz-service and question-service as micro-service .

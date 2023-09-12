@@ -36,9 +36,15 @@
 		<!--</dependency>-->
 
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+    		<groupId>org.apache.tomcat</groupId>
+    		<artifactId>tomcat-jasper</artifactId>
+    		<version>10.1.12</version>
+		</dependency>
+
+		<dependency>
+	    	<groupId>mysql</groupId>
+	    	<artifactId>mysql-connector-java</artifactId>
+	    	<version>8.0.33</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
