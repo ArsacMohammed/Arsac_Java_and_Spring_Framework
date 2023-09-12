@@ -1,12 +1,20 @@
 package com.Arsac.springMVCBoot.QuizApp.model;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class QuestionWrapper {
 	int id;
+
 	String option1;
 	String option2;
 	String option3;
 	String option4;
 	String questionTitle;
+	public QuestionWrapper() {
+		super();
+	}
+
 	public QuestionWrapper(int id,String questionTitle, String option1, String option2, String option3, String option4) {
 		super();
 		this.id = id;
@@ -22,6 +30,7 @@ public class QuestionWrapper {
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getOption1() {
 		return option1;
 	}

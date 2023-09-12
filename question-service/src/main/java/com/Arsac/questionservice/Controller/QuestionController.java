@@ -1,18 +1,20 @@
 package com.Arsac.questionservice.Controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Arsac.questionservice.Service.QuestionService;
 import com.Arsac.questionservice.model.Question;
+import com.Arsac.questionservice.model.QuestionWrapper;
+import com.Arsac.questionservice.model.Response;
 
 @RestController
 @RequestMapping("/question")
@@ -34,8 +36,17 @@ public class QuestionController {
 	public ResponseEntity<String> addQuestion(@RequestBody Question question) {
 		return questionService.addQuestion(question);
 	}
+	@GetMapping("create")
+	public ResponseEntity<List<Integer>> getQuestionForQuiz(@RequestParam String category,@RequestParam int numberOfQuestions){
+		return  questionService.getQuestionForQuiz(numberOfQuestions,category);
+	}
+	@PostMapping("getQuestion")
+	public ResponseEntity<List<QuestionWrapper>> getQuestionFromId(@RequestBody List<Integer> questionId){
+		return questionService.getQuestionById(questionId);
+		
+	}
+	@PostMapping("getscore")
+	public ResponseEntity<Integer> calculateScore(@RequestBody List<Response> responses){
+		return questionService.calculateScore(responses);
+	}
 }
-//generate 
-//getQuestion(question_id)
-//calculateScore() these all have to done here because it has all the resources in the question service 
-//instead of connecting the quiz to  the question database ,we use http to connect the quiz-service and question-service as micro-service .
